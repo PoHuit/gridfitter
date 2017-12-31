@@ -111,4 +111,8 @@ def fit_modules(to_fit, counts, grid):
         return None
     return best_grid, min_cost, best_fit
 
-print(fit_modules(modules, (1, 3, 2), grid_start))
+grid, cost, fittings = fit_modules(modules, (2, 3, 0), grid_start)
+print("grid: %.2f MW  cost: %.3fM ISK" % (grid, cost / 1000.0))
+print()
+for f in fittings:
+    print(f)
